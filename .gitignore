@@ -8,3 +8,5 @@ package-lock.json
 .env.local
 
 .DS_Store
+
+proxies.txt

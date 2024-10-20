@@ -25,6 +25,9 @@ fi
 # Detect which docker compose command to use
 DOCKER_COMPOSE=$(detect_docker_compose)
 
+# Start the proxy updater script in the background
+nohup ./update_proxies.sh &
+
 # Check the value of ALLOW_MONGO_EXPRESS and run the appropriate command
 if [ "$ALLOW_MONGO_EXPRESS" = "1" ]; then
   # Make sure the network exists before running the containers
